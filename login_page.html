@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      background-image: url("wp11440157-iit-roorkee-wallpapers.jpg");
+      height: 100vh;
+      background-size: cover ;
+      background-repeat: no-repeat;
+    }
+    
+    .container {
+      width: 400px;
+      height: 400px;
+      margin: 300px auto;
+      background-color:rgba(221, 215, 215, 0.500);;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: larger;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    .form-group .new-user {
+      text-align: center;
+    }
+    
+    .form-group .new-user a {
+      color: #0000EE;
+      text-decoration: none;
+    }
+    .cancel-btn,
+  .signin-btn {
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+  }
+  .cancel-btn {
+    background-color: #27ac1f;
+    margin-right: 10px;
+  }
+  
+  .signin-btn {
+    background-color: #27ac1f;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <label for="repeatPassword">Repeat Password</label>
+        <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Re-enter your password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="signin-btn" onclick="window.location.href='/wesite_project/home_page2.html'";>Submit</button>
+        <button type="button" class="cancel-btn" onclick="window.location.href='/wesite_project/home_page.html'">Cancel</button>
+      </div>
+      <div class="form-group new-user">
+        <a href="sign_up_page.html">Create a new account</a>
+      </div>
+    </form>
+  </div>
+  <script>
+    // JavaScript code for handling form submission
+    const form = document.querySelector('form');
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      // Retrieve form data
+      const Username = document.getElementById('username').value;
+      const Password = document.getElementById('password').value;
+
+      console.log('Username:', Username);
+      console.log('Password:', Password);
+      form.reset();
+    });
+      </script>
+</body>
+</html>
