@@ -42,7 +42,7 @@
       
       <div class="form-group">
         <button type="button" class="cancel-btn" onclick="window.location.href='home_page.html'">Cancel</button>
-        <button type="submit" class="signin-btn" onclick="window.location.href='login_page.html'" >Sign In</button>
+        <button type="submit" class="signin-btn" onclick="valid()" >Sign In</button>
       </div>
     </form>
   </div>
@@ -112,6 +112,16 @@
       
       // Reset the form
       form.reset();
+       function valid(){
+    if(document.getElementById("user").value != "" && document.getElementById("password").value.length > 6 && document.getElementById("email").value != "")
+    {
+        document.write("");
+        window.open("login.html");
+    }
+    else{
+        alert("Please enter complete details");
+    }
+}
     });
   </script>
 </body>
